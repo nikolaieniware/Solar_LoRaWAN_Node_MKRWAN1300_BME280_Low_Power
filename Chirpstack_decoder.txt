@@ -1,0 +1,9 @@
+function Decode(fPort, bytes){
+
+var temperature = ((bytes[0] << 8 | bytes[1])) / 10;
+var Pressure = ((bytes[4] << 8 | bytes[5])) / 10;
+  return {
+    temperature: temperature
+    pressure: Pressure
+}
+}
